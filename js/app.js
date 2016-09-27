@@ -14,7 +14,6 @@ function initMap() {
     });
 }
 
-initMap();
 //     // create global infowindow 
 //     infowindow = new google.maps.InfoWindow();
 //     ko.applyBindings(new ViewModel());
