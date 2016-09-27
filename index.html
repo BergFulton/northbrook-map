@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Present Locations of Northbrook Works</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid constrained">
+        <div class="row bordered-bottom">
+            <div class="col-xs-12 banner">
+                <h1 class="text">Where in the world are the Northbrook paintings?</h1>
+                <h2 class="text">Art gets around.</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="searches bordered-bottom">
+                <h3 class="text">Search for art:</h3>
+                <div class="search-field-wrap">
+                    <input class="filter" id="pizza-search-txt" type="text" placeholder="Ex: Franks, or Ambridge" data-bind="textInput: query">
+                    <input class="filter" id="ratings-search-btn" type="submit" value="Go">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="list-wrap" id="list">
+                <ul class="locations-list" data-bind="foreach: pizzaList">
+                    <li class="location" data-bind="visible: showMe">
+                        <span data-bind="text: title, click: $parent.openWindow" class="highlightItem"></span>
+<!--This is for a future enhancement                          
+<span class="insider-quote" data-bind="visible: showQuote"></span>
+ -->                    </li>
+                </ul>
+            </div>
+            <div class="map-wrap">
+                <div id="map-container">
+                    <div id="map">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row copyright bordered-top">
+            <div class="col-xs-12">
+                <p>Copyright, 2016. Tracey Berg-Fulton.</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/lib/knockout-3.2.0.js"></script>
+    <script src="js/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places,drawing,geometry&key=AIzaSyDbhQUVvTyLIEJ-qGSCXpnA3fV1_HDJ-yo&v=3&callback=initMap" onerror="googleError()">
+    </script>
+    </div>
+</body>
+
+</html>
