@@ -7,10 +7,10 @@ var infowindow; // create global infowindow
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {
-            lat: 40.440625,
-            lng: -79.995886
+            lat:40.6494906,
+            lng:-30.6977297
         },
-        zoom: 10,
+        zoom: 2,
         mapTypeControl: true
     });
 
