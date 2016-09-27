@@ -32,9 +32,9 @@
         </div>
         <div class="row">
             <div class="list-wrap" id="list">
-                <ul class="locations-list" data-bind="foreach: pizzaList">
-                    <li class="location" data-bind="visible: showMe">
-                        <span data-bind="text: title, click: $parent.openWindow" class="highlightItem"></span>
+                <ul class="locations-list" data-bind="foreach: artList">
+                    <li class="location">
+                        <span data-bind="text: Title, click: $parent.openWindow" class="highlightItem"></span>
                     </li>
                 </ul>
             </div>
